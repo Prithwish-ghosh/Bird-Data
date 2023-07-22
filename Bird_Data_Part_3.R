@@ -207,6 +207,32 @@ fit66 = lm.circular(Swainsons_hawk$theta , Swainsons_hawk$azimuth)
 fit6$rho
 fit66$rho
 
+
+library(suncalc)
+dataframe = data.frame(date = new_data$date , lat = new_data$latitude , lon = new_data$longitude)
+df = suncalc::getMoonPosition(data = dataframe , keep = c("azimuth"))
+head(df)
+Black_bellied_plover_m = df[1:121,]
+Black_crowned_night_heron_m = df[122:167,]
+Brown_pelican_m = df[168:243,]
+Long_billed_curlew_m = df[244:375,]
+Pacific_loon_m = df[376:536,]
+Swainsons_hawk_m = df[537:703,]
+
+fit7 = lm.circular(Black_bellied_plover$theta , Black_bellied_plover_m$azimuth)
+fit7$rho
+fit8 = lm.circular(Black_crowned_night_heron$theta , Black_crowned_night_heron_m$azimuth)
+fit8$rho
+fit9 = lm.circular(Brown_pelican$theta , Brown_pelican_m$azimuth)
+fit9$rho
+fit10 = lm.circular(Long_billed_curlew$theta , Long_billed_curlew_m$azimuth)
+fit10$rho
+fit11 = lm.circular(Pacific_loon$theta , Pacific_loon_m$azimuth)
+fit11$rho
+fit12 = lm.circular(Swainsons_hawk$theta , Swainsons_hawk_m$azimuth)
+fit12$rho
+
+
 bird_partition = dff$bird
 colours =c("blue","red","green","brown","yellow", "pink")
 library(flexmix)
