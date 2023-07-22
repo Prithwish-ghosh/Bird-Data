@@ -267,7 +267,8 @@ plot <- ggplot() +
   theme(legend.position = "bottom")
 print(plot)
 
-
+watson.test(new_data$zenith , alpha = 0.01 , dist = "vonmises")
+watson.test(new_data$azimuth , alpha = 0.01 ,  dist = "vonmises")
 
 sub_df61$part = "part 1"
 sub_df611$part = "part 2"
