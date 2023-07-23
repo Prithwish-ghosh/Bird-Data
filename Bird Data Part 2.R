@@ -187,3 +187,13 @@ fit2 = lm.circular(Sanne$direction , Sanne$azimuth)
 fit22 = lm.circular(Sanne$direction , Sanne$zenith)
 fit3 = lm.circular(Nicco$direction , Nicco$zenith)
 fit33 = lm.circular( Nicco$direction,Nicco$azimuth)
+
+fit1$rho
+fit2$rho
+fit3$rho
+fit11$rho
+fit22$rho
+fit33$rho
+f1$rho
+f2$rho
+f3$rho
