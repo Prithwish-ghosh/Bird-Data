@@ -13,11 +13,11 @@
 
 library(Directional)
 library(circular)
-library(Directional)
+#library(Directional)
 library(CircStats)
 library(tidyverse)
 library(ggplot2)
-library(SpatialVx)
+#library(SpatialVx)
 library(NPCirc)
 library(CircStats)
 
@@ -81,6 +81,11 @@ watson.test(circular(d15$latitude) , alpha = 0.01 , dist = "uniform")
 watson.test(circular(d16$longitude) , alpha = 0.01 , dist = "vonmises")
 watson.test(circular(d16$latitude) , alpha = 0.01 , dist = "vonmises")
 
+summary(d16)
+circ.mean(d16$latitude)
+est.kappa(d16$latitude)
+circ.mean(d16$longitude)
+est.kappa(d16$longitude)
 ##############################################################################
 
 dataframe = sort(d11$latitude)
@@ -146,6 +151,11 @@ ggplot() +
 
 watson.test(sub_df611$col1 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df611$col2 , alpha = 0.01 , dist = "vonmises")
+summary(sub_df611)
+circ.mean(sub_df611$col1)
+est.kappa(sub_df611$col1)
+circ.mean(sub_df611$col2)
+est.kappa(sub_df611$col2)
 ##############################################################################
 
 length(sub_df6$col1)
@@ -179,6 +189,9 @@ watson.test(sub_df61$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df61$col1 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df61$col2 , alpha = 0.01 , dist = "uniform")
 watson.test(sub_df61$col1 , alpha = 0.01 , dist = "uniform")
+summary(sub_df61)
+circ.summary(sub_df61$col1)
+circ.mean(sub_df61$col1)
 ##############################################################################
 
 
@@ -211,7 +224,11 @@ ggplot() +
 
 watson.test(sub_df612$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df612$col1 , alpha = 0.01 , dist = "vonmises")
-
+summary(sub_df612)
+circ.mean(sub_df612$col1)
+circ.mean(sub_df612$col2)
+est.kappa(sub_df6$col1)
+est.kappa(sub_df612$col2)
 ############################################################################
 
 length(sub_df6$col1)
@@ -244,6 +261,11 @@ ggplot() +
 watson.test(sub_df613$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df613$col1 , alpha = 0.01 , dist = "vonmises")
 
+summary(sub_df613)
+circ.mean(sub_df613$col1)
+circ.mean(sub_df613$col2)
+est.kappa(sub_df613$col1)
+est.kappa(sub_df613$col2)
 ##############################################################################
 length(sub_df6$col1)
 dataframe = sort(sub_df6$col2)
@@ -275,6 +297,11 @@ ggplot() +
 watson.test(sub_df614$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df614$col1 , alpha = 0.01 , dist = "vonmises")
 
+summary(sub_df614)
+circ.mean(sub_df614$col1)
+circ.mean(sub_df614$col2)
+est.kappa(sub_df614$col1)
+est.kappa(sub_df614$col2)
 ##############################################################################
 
 length(sub_df6$col1)
@@ -307,6 +334,11 @@ ggplot() +
 watson.test(sub_df615$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df615$col1 , alpha = 0.01 , dist = "vonmises")
 
+summary(sub_df615)
+circ.mean(sub_df615$col1)
+circ.mean(sub_df615$col2)
+est.kappa(sub_df615$col1)
+est.kappa(sub_df615$col2)
 ##############################################################################
 
 length(sub_df6$col1)
@@ -338,7 +370,11 @@ ggplot() +
 
 watson.test(sub_df616$col2 , alpha = 0.05 , dist = "vonmises")
 watson.test(sub_df616$col1 , alpha = 0.01 , dist = "vonmises")
-
+summary(sub_df616)
+circ.mean(sub_df616$col1)
+circ.mean(sub_df616$col2)
+est.kappa(sub_df616$col1)
+est.kappa(sub_df616$col2)
 ##############################################################################
 
 length(sub_df6$col1)
@@ -370,8 +406,11 @@ ggplot() +
 
 watson.test(sub_df617$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df617$col1 , alpha = 0.01 , dist = "vonmises")
-
-
+summary(sub_df617)
+circ.mean(sub_df617$col1)
+circ.mean(sub_df617$col2)
+est.kappa(sub_df617$col1)
+est.kappa(sub_df617$col2)
 ##############################################################################
 
 length(sub_df6$col1)
@@ -404,6 +443,11 @@ ggplot() +
 watson.test(sub_df618$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df618$col1 , alpha = 0.01 , dist = "vonmises")
 
+summary(sub_df618)
+circ.mean(sub_df618$col1)
+circ.mean(sub_df618$col2)
+est.kappa(sub_df618$col1)
+est.kappa(sub_df618$col2)
 ##############################################################################
 
 length(sub_df6$col1)
@@ -436,6 +480,11 @@ ggplot() +
 watson.test(sub_df619$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df619$col1 , alpha = 0.01 , dist = "vonmises")
 
+summary(sub_df619)
+circ.mean(sub_df619$col1)
+circ.mean(sub_df619$col2)
+est.kappa(sub_df619$col1)
+est.kappa(sub_df619$col2)
 ##############################################################################
 
 length(sub_df6$col1)
@@ -468,6 +517,9 @@ ggplot() +
 watson.test(sub_df6111$col2 , alpha = 0.01 , dist = "uniform")
 watson.test(sub_df6111$col1 , alpha = 0.01 , dist = "uniform")
 
+summary(sub_df6111)
+circ.mean(sub_df6111$col1)
+circ.mean(sub_df6111$col2)
 ##############################################################################
 
 
@@ -499,11 +551,13 @@ ggplot() +
   ) +
   theme(legend.position="top")
 
-watson.test(sub_df6112$col2 , alpha = 0.01 , dist = "vonmises")
+watson.test(circular(sub_df6112$col2) , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6112$col1 , alpha = 0.01 , dist = "vonmises")
-
-
-
+summary(sub_df6112)
+circ.mean(sub_df6112$col1)
+circ.mean(sub_df6112$col2)
+est.kappa(sub_df6112$col1)
+est.kappa(sub_df6112$col2)
 ############################################################################
 
 
@@ -539,6 +593,11 @@ watson.test(sub_df6113$col1 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6113$col2 , alpha = 0.01 , dist = "uniform")
 watson.test(sub_df6113$col1 , alpha = 0.01 , dist = "uniform")
 
+summary(sub_df6113)
+circ.mean(sub_df6113$col1)
+circ.mean(sub_df6113$col2)
+est.kappa(sub_df6113$col1)
+est.kappa(sub_df6113$col2)
 ###############################################################################
 
 
@@ -572,7 +631,11 @@ ggplot() +
 watson.test(sub_df6114$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6114$col1 , alpha = 0.01 , dist = "vonmises")
 
-
+summary(sub_df6114)
+circ.mean(sub_df6114$col1)
+circ.mean(sub_df6114$col2)
+est.kappa(sub_df6114$col1)
+est.kappa(sub_df6114$col2)
 #############################################################################
 
 length(sub_df6$col1)
@@ -604,6 +667,12 @@ ggplot() +
 
 watson.test(sub_df6115$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6115$col1 , alpha = 0.01 , dist = "vonmises")
+pp.plot(sub_df6115$col1)
+summary(sub_df6115)
+circ.mean(sub_df6115$col1)
+circ.mean(sub_df6115$col2)
+est.kappa(sub_df6115$col1)
+est.kappa(sub_df6115$col2)
 
 ##############################################################################
 length(sub_df6$col1)
@@ -638,7 +707,11 @@ watson.test(sub_df6116$col1 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6116$col2 , alpha = 0.01 , dist = "uniform")
 watson.test(sub_df6116$col1 , alpha = 0.01 , dist = "uniform")
 
-
+summary(sub_df6116)
+circ.mean(sub_df6116$col1)
+circ.mean(sub_df6116$col2)
+est.kappa(sub_df6116$col1)
+est.kappa(sub_df6116$col2)
 #############################################################################
 
 
@@ -674,6 +747,11 @@ ggplot() +
 watson.test(sub_df6117$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6117$col1 , alpha = 0.01 , dist = "vonmises")
 
+summary(sub_df6117)
+circ.mean(sub_df6117$col1)
+circ.mean(sub_df6117$col2)
+est.kappa(sub_df6117$col1)
+est.kappa(sub_df6117$col2)
 ##########################################################################
 
 
@@ -707,8 +785,13 @@ ggplot() +
 watson.test(sub_df6118$col2 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6118$col1 , alpha = 0.01 , dist = "vonmises")
 
-
+summary(sub_df6118)
+circ.mean(sub_df6118$col1)
+circ.mean(sub_df6118$col2)
+est.kappa(sub_df6118$col1)
+est.kappa(sub_df6118$col2)
 #############################################################################
+
 
 
 length(sub_df6$col1)
@@ -743,7 +826,11 @@ watson.test(sub_df6119$col1 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6119$col2 , alpha = 0.01 , dist = "uniform")
 watson.test(sub_df6119$col1 , alpha = 0.01 , dist = "uniform")
 
-
+summary(sub_df6119)
+circ.mean(sub_df6119$col1)
+circ.mean(sub_df6119$col2)
+est.kappa(sub_df6119$col1)
+est.kappa(sub_df6119$col2)
 #############################################################################
 
 
@@ -779,6 +866,11 @@ watson.test(sub_df6120$col1 , alpha = 0.01 , dist = "vonmises")
 watson.test(sub_df6120$col2 , alpha = 0.01 , dist = "uniform")
 watson.test(sub_df6120$col1 , alpha = 0.01 , dist = "uniform")
 
+summary(sub_df6120)
+circ.mean(sub_df6120$col1)
+circ.mean(sub_df6120$col2)
+est.kappa(sub_df6120$col1)
+est.kappa(sub_df6120$col2)
 ############################################################################
 
 new_data = B_data
@@ -1012,11 +1104,11 @@ northern_map <- subset(world_map, long <= 0)
 plot <- ggplot() +
   geom_polygon(data = northern_map, aes(x = long, y = lat, group = group), fill = "lightblue", color = "black") +
   coord_fixed() +
-geom_segment(data = bird_data,
-             aes(x = lon, y = lat, xend = lon + sin(direction * pi/180),
-                 yend = lat + cos(direction * pi/180),
-                 color = bird),
-             arrow = arrow(length = unit(0.2, "cm"), type = "open", ends = "last")) +
+  geom_segment(data = bird_data,
+               aes(x = lon, y = lat, xend = lon + sin(direction * pi/180),
+                   yend = lat + cos(direction * pi/180),
+                   color = bird),
+               arrow = arrow(length = unit(0.2, "cm"), type = "open", ends = "last")) +
   scale_color_manual(values = c("Black-bellied plover" = "red", 
                                 "Black-crowned night heron" = "blue", 
                                 "Swainson's hawk" = "black",
