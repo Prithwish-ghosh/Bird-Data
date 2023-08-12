@@ -7,6 +7,7 @@ library ( rgl )
 library ( rglwidget )
 library(circular)
 library(maps)
+library(movMF)
 library(ggplot2)
 head(data)
 Eric = data[1:19795,]
@@ -197,3 +198,32 @@ fit33$rho
 f1$rho
 f2$rho
 f3$rho
+
+e = cbind(data$latitude , data$longitude)
+set.seed(2022)
+EvMFs <- 
+  function(K){
+    movMF(e, k = K, control= list(nruns = 20))
+  }
+
+Esd = lapply(1:15, EvMFs)
+gt = sapply(Esd, BIC)
+gt
+min(gt)
+
+
+Esd[[1]]$details # For K value 1
+Esd[[2]]$details # For K value 2
+Esd[[3]]$details # For K value 3
+Esd[[4]]$details # For K value 4
+Esd[[5]]$details # For K value 5
+Esd[[6]]$details # For K value 6
+Esd[[7]]$details # For K value 7
+Esd[[8]]$details # For K value 8
+Esd[[9]]$details # For K value 9
+Esd[[10]]$details # For K value 10
+Esd[[11]]$details # For K value 11
+Esd[[12]]$details # For K value 12
+Esd[[13]]$details # For K value 13
+Esd[[14]]$details # For K value 14
+Esd[[15]]$details # For K value 15
