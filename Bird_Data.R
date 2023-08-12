@@ -13,11 +13,12 @@
 
 library(Directional)
 library(circular)
-#library(Directional)
+library(Directional)
 library(CircStats)
 library(tidyverse)
 library(ggplot2)
-#library(SpatialVx)
+library(SpatialVx)
+library(movMF)
 library(NPCirc)
 library(CircStats)
 
@@ -1174,3 +1175,18 @@ plot <- plot +
 
 # Print the plot
 print(plot)
+
+s = cbind(B_data$latitude , B_data$longitude)
+set.seed(2023)
+vMFs <- 
+  function(K){
+    movMF(s, k = K, control= list(nruns = 20))
+  }
+sd = lapply(18:22, vMFs)
+sd
+sapply(sd, BIC)
+sd[[1]]$details # For K value 18
+sd[[2]]$details # For K value 19
+sd[[3]]$details # For K value 20
+sd[[4]]$details # For K value 21
+sd[[5]]$details # For K value 22
