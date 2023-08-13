@@ -18,6 +18,29 @@ watson.test(Eric$direction , alpha = 0.05 , dist = "vonmises")
 watson.test(Sanne$direction, alpha = 0.05, dist = "vonmises")
 watson.test(Nicco$direction, alpha = 0.05 , dist = "vonmises")
 
+Eric$col = "red"
+Nicco$col = "blue"
+Sanne$col = "green"
+
+plot(circular(Nicco$longitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.1 , lty = 1)
+points(circular(Eric$longitude) , col = d12$col , cex = 0.1, lty = 2)
+points(circular(Sanne$longitude) , col = d13$col , cex = 0.1, lty = 3)
+lines(density.circular(Nicco$longitude , bw = 10) , col = "blue", lty = 4)
+lines(density.circular( rvonmises(n=1000, mu=mean(Nicco$longitude), kappa=est.kappa(Nicco$longitude)), bw = 10) , col = "black" , lwd = 0.5, lty = 5)
+legend("topleft", legend=c("Eric", "Nicco" ,"Sanne" , "Von mises Density"),
+       col=c("red", "blue" , "green", "black"), lty=c(1:5),lwd=c(2,2), cex=0.59,
+       box.lty=0)
+
+
+plot(circular(Nicco$latitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.1 , lty = 1)
+points(circular(Eric$latitude) , col = d12$col , cex = 0.1, lty = 2)
+points(circular(Sanne$latitude) , col = d13$col , cex = 0.1, lty = 3)
+lines(density.circular(Nicco$latitude , bw = 10) , col = "blue", lty = 4)
+lines(density.circular( rvonmises(n=1000, mu=mean(Nicco$latitude), kappa=est.kappa(Nicco$latitude)), bw = 10) , col = "black" , lwd = 0.5, lty = 5)
+legend("topleft", legend=c("Eric", "Nicco" ,"Sanne" , "Von mises Density"),
+       col=c("red", "blue" , "green", "black"), lty=c(1:5),lwd=c(2,2), cex=0.59,
+       box.lty=0)
+
 
 world_map <- map_data("world")
 library(maps)
