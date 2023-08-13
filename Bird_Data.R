@@ -75,7 +75,7 @@ d15$col = "purple"
 d16$col = "brown"
 
 
-plot(circular(d11$latitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.5 , lty = 1)
+plot(circular(d11$latitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1.1, 1.5) , cex = 0.5 , lty = 1)
 points(circular(d12$latitude) , col = d12$col , cex = 0.5, lty = 2)
 points(circular(d13$latitude) , col = d13$col , cex = 0.5, lty = 3)
 points(circular(d14$latitude) , col = d14$col , cex = 0.5, lty = 4)
@@ -89,7 +89,7 @@ legend("topleft", legend=c("Black-bellied plover", "Black-crowned night heron" ,
        col=c("red", "green" , "blue", "pink" , "purple","brown", "black"), lty=c(1:8),lwd=c(2,2), cex=0.59,
        box.lty=0)
 
-plot(circular(d11$longitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.5 , lty = 1)
+plot(circular(d11$longitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1.1, 1.5) , cex = 0.5 , lty = 1)
 points(circular(d12$longitude) , col = d12$col , cex = 0.5, lty = 2)
 points(circular(d13$longitude) , col = d13$col , cex = 0.5, lty = 3)
 points(circular(d14$longitude) , col = d14$col , cex = 0.5, lty = 4)
