@@ -22,7 +22,7 @@ Eric$col = "red"
 Nicco$col = "blue"
 Sanne$col = "green"
 
-plot(circular(Nicco$longitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.1 , lty = 1)
+plot(circular(Nicco$longitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1.5, 1.5) , cex = 0.1 , lty = 1)
 points(circular(Eric$longitude) , col = d12$col , cex = 0.1, lty = 2)
 points(circular(Sanne$longitude) , col = d13$col , cex = 0.1, lty = 3)
 lines(density.circular(Nicco$longitude , bw = 10) , col = "blue", lty = 4)
@@ -32,7 +32,7 @@ legend("topleft", legend=c("Eric", "Nicco" ,"Sanne" , "Von mises Density"),
        box.lty=0)
 
 
-plot(circular(Nicco$latitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.1 , lty = 1)
+plot(circular(Nicco$latitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1.1, 1.5) , cex = 0.1 , lty = 1)
 points(circular(Eric$latitude) , col = d12$col , cex = 0.1, lty = 2)
 points(circular(Sanne$latitude) , col = d13$col , cex = 0.1, lty = 3)
 lines(density.circular(Nicco$latitude , bw = 10) , col = "blue", lty = 4)
