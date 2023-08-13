@@ -67,6 +67,43 @@ d14=d1[244:375,]
 d15=d1[376:536,]
 d16=d1[537:703,]
 
+d11$col = "red"
+d12$col = "green"
+d13$col = "blue"
+d14$col = "pink"
+d15$col = "purple"
+d16$col = "brown"
+
+
+plot(circular(d11$latitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.5 , lty = 1)
+points(circular(d12$latitude) , col = d12$col , cex = 0.5, lty = 2)
+points(circular(d13$latitude) , col = d13$col , cex = 0.5, lty = 3)
+points(circular(d14$latitude) , col = d14$col , cex = 0.5, lty = 4)
+points(circular(d15$latitude) , col = d15$col , cex = 0.5, lty = 5)
+points(circular(d16$latitude) , col = d16$col , cex = 0.7, lty = 6)
+lines(density.circular(d11$latitude , bw = 10) , col = "brown", lty = 7)
+lines(density.circular( rvonmises(n=1000, mu=mean(d16$latitude), kappa=est.kappa(d16$latitude)), bw = 10) , col = "black" , lwd = 0.5, lty = 8)
+legend("topleft", legend=c("Black-bellied plover", "Black-crowned night heron" , 
+                           "Brown pelican" , "Long-billed curlew" , "Pacific loon",
+                           "Swainson's hawk ", "Von mises Density"),
+       col=c("red", "green" , "blue", "pink" , "purple","brown", "black"), lty=c(1:8),lwd=c(2,2), cex=0.59,
+       box.lty=0)
+
+plot(circular(d11$longitude) , col = d11$col , xlim=c(-1,1), ylim=c(-1, 1) , cex = 0.5 , lty = 1)
+points(circular(d12$longitude) , col = d12$col , cex = 0.5, lty = 2)
+points(circular(d13$longitude) , col = d13$col , cex = 0.5, lty = 3)
+points(circular(d14$longitude) , col = d14$col , cex = 0.5, lty = 4)
+points(circular(d15$longitude) , col = d15$col , cex = 0.5, lty = 5)
+points(circular(d16$longitude) , col = d16$col , cex = 0.7, lty = 6)
+lines(density.circular(d11$longitude , bw = 10) , col = "brown", lty = 7)
+lines(density.circular( rvonmises(n=1000, mu=mean(d16$longitude), kappa=est.kappa(d16$longitude)), bw = 10) , col = "black" , lwd = 0.5, lty = 8)
+legend("topleft", legend=c("Black-bellied plover", "Black-crowned night heron" , 
+                           "Brown pelican" , "Long-billed curlew" , "Pacific loon",
+                           "Swainson's hawk ", "Von mises Density"),
+       col=c("red", "green" , "blue", "pink" , "purple","brown", "black"), lty=c(1:8),lwd=c(2,2), cex=0.59,
+       box.lty=0)
+
+
 
 watson.test(circular(d12$longitude) , alpha = 0.01 , dist = "vonmises")
 watson.test(circular(d12$latitude) , alpha = 0.01 , dist = "vonmises")
